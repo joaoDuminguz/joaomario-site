@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://duminguz.com.br/sitemap.xml

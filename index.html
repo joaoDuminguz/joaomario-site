@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>João Mário Araújo · Product Designer UI/UX e Identidade Visual · João Pessoa</title>
+<meta name="description" content="Designer de soluções digitais em João Pessoa: interfaces de sites, apps e sistemas, design system, identidade visual, ícones e motion. Mais de 12 anos de design e experiência internacional em startup de tecnologia dos EUA.">
+<link rel="canonical" href="https://duminguz.com.br/">
+<meta name="theme-color" content="#1c1a18">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="João Mário Araújo · Product Designer UI/UX e Identidade Visual · João Pessoa">
+<meta property="og:description" content="Designer de soluções digitais em João Pessoa: interfaces de sites, apps e sistemas, design system, identidade visual, ícones e motion. Mais de 12 anos de design e experiência internacional em startup de tecnologia dos EUA.">
+<meta property="og:url" content="https://duminguz.com.br/">
+<meta property="og:image" content="https://duminguz.com.br/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "João Mário Araújo", "url": "https://duminguz.com.br/", "jobTitle": "Product Designer · UI/UX e Identidade Visual", "email": "mailto:jmdsgnr.art@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "João Pessoa", "addressRegion": "PB", "addressCountry": "BR"}, "knowsAbout": ["UI Design", "UX Design", "Product Design", "Design System", "Figma", "Identidade visual", "Motion design", "Iconografia", "Sites e landing pages", "Apps"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  /* Layout: warm-dark one-pager. Giant name, numbers strip, then five chapters of a dense media grid (video first), career, contact.
+     Palette: a cut of the Duminguz brand (warm black, bone, clay; blue as the second note). Single dark look on purpose. */
+  :root {
+    --bg: #1c1a18; --panel: #25221f; --ink: #f3ebd5; --muted: #a89f8c; --line: #383430;
+    --clay: #bc6036; --oxide: #8c2813; --blue: #73cae7; --deepblue: #3284c5;
+    --display: 'Inter Tight', 'Inter', 'Segoe UI', system-ui, sans-serif; --body: 'Inter', 'Segoe UI', system-ui, sans-serif; --mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+    --gap: 8px; --pad: max(20px, env(safe-area-inset-left, 0px));
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 4px; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+
+  header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 8; background: rgba(28,26,24,.86); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+  .brand { font-family: var(--display); font-weight: 700; letter-spacing: -.02em; text-decoration: none; }
+  nav { display: flex; gap: 20px; font-size: 14px; color: var(--muted); }
+  nav a { text-decoration: none; } nav a:hover { color: var(--ink); }
+  .pill { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 999px; padding: 9px 16px; font-size: 14px; text-decoration: none; background: var(--panel); white-space: nowrap; }
+  .pill:hover { border-color: var(--blue); }
+  .pill.solid { background: var(--clay); color: #1c1a18; border-color: var(--clay); font-weight: 600; }
+  @media (max-width: 760px) { nav { display: none; } }
+
+  .hero { position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; right: -15%; top: -35%; width: 75vw; height: 75vw; max-width: 980px; max-height: 980px; background: radial-gradient(closest-side, rgba(188,96,54,.30), rgba(140,40,19,.10) 55%, transparent 72%); pointer-events: none; }
+  .hero .wrap { padding-block: clamp(36px, 6vw, 84px) 30px; display: flex; flex-direction: column; gap: 24px; position: relative; }
+  .role { font-family: var(--mono); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--clay); }
+  h1 { font-family: var(--display); font-weight: 800; font-size: clamp(56px, 12.5vw, 188px); line-height: .86; letter-spacing: -.055em; margin: 0; }
+  .claim { font-family: var(--display); font-weight: 500; font-size: clamp(22px, 3vw, 36px); line-height: 1.15; letter-spacing: -.02em; max-width: 24ch; margin: 0; text-wrap: balance; }
+  .claim span { color: var(--muted); }
+  .ctas { display: flex; flex-wrap: wrap; gap: 10px; }
+
+  .nums { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .nums div { padding: 20px 18px 20px 0; display: flex; flex-direction: column; gap: 2px; }
+  .nums div + div { padding-left: 18px; border-left: 1px solid var(--line); }
+  .nums b { font-family: var(--display); font-size: clamp(24px, 3vw, 36px); letter-spacing: -.03em; font-weight: 700; }
+  .nums span { color: var(--muted); font-size: 14px; }
+  @media (max-width: 760px) { .nums { grid-template-columns: 1fr 1fr; } .nums div:nth-child(3) { padding-left: 0; border-left: 0; } .nums div:nth-child(n+3) { border-top: 1px solid var(--line); } }
+
+  #trabalhos { padding-block: 36px 8px; }
+  .tophead { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 14px; margin-bottom: 8px; }
+  h2 { font-family: var(--display); font-size: clamp(28px, 4vw, 48px); letter-spacing: -.035em; margin: 0; line-height: 1; }
+  .jump { display: flex; flex-wrap: wrap; gap: 8px; }
+  .jump a { font: 500 13.5px var(--body); color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 7px 13px; text-decoration: none; }
+  .jump a:hover { color: var(--ink); border-color: var(--clay); }
+
+  .chapter { padding-top: 26px; scroll-margin-top: 70px; }
+  .chap-h { display: flex; align-items: baseline; gap: 12px; margin-bottom: 12px; }
+  .chap-h .n { font: 500 12px var(--mono); color: var(--clay); letter-spacing: .1em; }
+  .chap-h h3 { font-family: var(--display); font-size: clamp(19px, 2vw, 24px); letter-spacing: -.02em; margin: 0; }
+  .chap-h p { margin: 0; color: var(--muted); font-size: 14px; }
+  @media (max-width: 560px) { .chap-h { flex-wrap: wrap; } .chap-h p { flex-basis: 100%; } }
+
+  /* justified rows: every tile in a row shares one height, widths follow each piece's own aspect,
+     so rows fill the width with no holes and nothing is cropped. Featured pieces take a block two rows tall. */
+  #trabalhos .wrap { max-width: 1560px; }
+  .grid { position: relative; }
+  .t { position: absolute; display: block; background: none; border: 0; padding: 0; cursor: pointer; color: inherit; font: inherit; text-align: left; }
+  .t .m { position: absolute; left: 0; top: 0; right: 0; border-radius: 8px; overflow: hidden; background: var(--panel); }
+  .t img, .t video { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+  .t img.fit { object-fit: contain; background: #fff; }
+  .t:hover .m > img, .t:hover .m > video { transform: scale(1.03); }
+  .t .cap { position: absolute; left: 0; right: 0; bottom: 0; height: 36px; display: flex; justify-content: space-between; gap: 8px; padding: 5px 2px 0; font-size: 12.5px; line-height: 1.3; }
+  .t .cap > span:first-child { min-width: 0; }
+  .t .cap b, .t .cap small { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .t .cap b { font-weight: 600; }
+  .t .cap small { color: var(--muted); font-size: 11.5px; }
+  .t .cap .y { font: 400 10.5px var(--mono); color: var(--muted); white-space: nowrap; padding-top: 2px; }
+  .t.f .cap b { font-size: 14px; }
+  .t .play { position: absolute; top: 6px; left: 6px; font: 500 9.5px var(--mono); letter-spacing: .08em; text-transform: uppercase; background: rgba(28,26,24,.75); border: 1px solid var(--line); border-radius: 999px; padding: 2px 7px; color: var(--blue); }
+  /* slides: sibling artworks cycling in one tile. A slide of another shape sits whole over a blurred copy of itself */
+  .sl { position: absolute; inset: 0; background: #14161a; }
+  .sl .s { position: absolute; inset: 0; opacity: 0; overflow: hidden; }
+  .sl .s img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; transition: none; }
+  .sl .s img.bb { object-fit: cover; filter: blur(18px) brightness(.55) saturate(1.1); transform: scale(1.15); }
+  .sl .s.on { opacity: 1; z-index: 2; }
+  .sl .s.out { opacity: 1; z-index: 1; }
+  /* digital transitions: stepped, no easing, no fades */
+  .sl.glitch .s.go { animation: glitch .62s steps(1, end) both; }
+  @keyframes glitch {
+    0%   { clip-path: inset(0 0 100% 0); transform: translateX(0); filter: none; }
+    8%   { clip-path: inset(12% 0 62% 0); transform: translateX(-6%); filter: contrast(1.8) saturate(2) hue-rotate(40deg); }
+    18%  { clip-path: inset(48% 0 22% 0); transform: translateX(5%); filter: contrast(1.5) saturate(1.8) hue-rotate(-30deg); }
+    28%  { clip-path: inset(0 0 58% 0); transform: translateX(-3%); filter: contrast(1.6) saturate(1.6); }
+    40%  { clip-path: inset(30% 0 8% 0); transform: translateX(2.5%); filter: contrast(1.3) hue-rotate(20deg); }
+    52%  { clip-path: inset(0 0 26% 0); transform: translateX(-1.5%); filter: contrast(1.2); }
+    66%  { clip-path: inset(6% 0 0 0); transform: translateX(1%); filter: none; }
+    80%  { clip-path: inset(0); transform: translateX(-.4%); }
+    100% { clip-path: inset(0); transform: none; filter: none; }
+  }
+  .sl.glitch .s.go::after { content: ""; position: absolute; inset: 0; pointer-events: none; mix-blend-mode: screen;
+    background: repeating-linear-gradient(0deg, rgba(115,202,231,.16) 0 2px, transparent 2px 5px); animation: scanfade .62s steps(4, end) both; }
+  @keyframes scanfade { from { opacity: 1; } to { opacity: 0; } }
+  .sl.scan .s.go { animation: scan .7s steps(9, end) both; }
+  @keyframes scan { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0); } }
+  .sl.scan .s.go::before { content: ""; position: absolute; left: 0; right: 0; height: 2px; z-index: 3; background: var(--blue); box-shadow: 0 0 12px 2px rgba(115,202,231,.8);
+    animation: scanline .7s steps(9, end) both; }
+  @keyframes scanline { from { top: 0; opacity: 1; } 99% { top: 100%; opacity: 1; } to { top: 100%; opacity: 0; } }
+  .dots { position: absolute; right: 7px; bottom: 7px; z-index: 3; display: flex; gap: 4px; padding: 3px 5px; border-radius: 999px; background: rgba(20,18,16,.55); }
+  .dots i { width: 5px; height: 5px; border-radius: 50%; background: rgba(243,235,213,.35); transition: background .3s, width .3s; }
+  .dots i.on { background: var(--clay); width: 12px; border-radius: 3px; }
+  /* a single piece gets a light sheen instead: motion without cropping */
+  .t.one .m::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(105deg, transparent 38%, rgba(243,235,213,.13) 50%, transparent 62%); transform: translateX(-130%); animation: sheen 8s ease-in-out infinite; animation-delay: var(--d, 0s); }
+  @keyframes sheen { 0%, 72% { transform: translateX(-130%); } 100% { transform: translateX(130%); } }
+  @media (prefers-reduced-motion: reduce) { .sl .s.go, .sl .s.go::before, .sl .s.go::after { animation: none !important; } .t.one .m::after { animation: none; } }
+  /* icon player: one icon at a time, animated in */
+  .seq { position: absolute; inset: 0; background: radial-gradient(closest-side, rgba(115,202,231,.16), transparent 70%), #1C232D; }
+  .seq img { position: absolute; left: 12%; top: 10%; width: 76%; height: 76%; object-fit: contain; opacity: 0; transform: scale(.7) rotate(-8deg); filter: blur(8px);
+    transition: opacity .5s ease, transform .6s cubic-bezier(.2,.9,.25,1.25), filter .5s ease; }
+  .seq img.on { opacity: 1; transform: none; filter: none; }
+  .seq img.out { opacity: 0; transform: scale(1.15); filter: blur(4px); transition-duration: .35s; }
+  .seq .ring { position: absolute; left: 50%; top: 48%; width: 60%; aspect-ratio: 1; border-radius: 50%; border: 1px solid rgba(115,202,231,.55); transform: translate(-50%, -50%) scale(.6); opacity: 0; pointer-events: none; }
+  .seq .ring.go { animation: ring .9s ease-out; }
+  @keyframes ring { from { opacity: .9; transform: translate(-50%, -50%) scale(.6); } to { opacity: 0; transform: translate(-50%, -50%) scale(1.25); } }
+  .seq .lab { position: absolute; left: 10px; bottom: 9px; font: 500 10px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--blue); }
+  .seq .bar { position: absolute; left: 0; bottom: 0; height: 2px; background: var(--clay); width: 0; }
+  @media (prefers-reduced-motion: reduce) { .seq img { transition: opacity .3s; transform: none; filter: none; } .seq .ring { display: none; } }
+
+  section.block { padding-block: 64px 20px; }
+  .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  @media (max-width: 760px) { .services { grid-template-columns: 1fr; } }
+  .svc { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 6px; }
+  .svc .n { font: 500 12px var(--mono); color: var(--clay); letter-spacing: .1em; }
+  .svc h3 { font-family: var(--display); font-size: 21px; margin: 0; letter-spacing: -.02em; }
+  .svc p { margin: 0; color: var(--muted); font-size: 15px; }
+  .career { list-style: none; margin: 18px 0 0; padding: 0; border-top: 1px solid var(--line); }
+  .career li { display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+  .career b { font-family: var(--display); font-size: clamp(20px, 2.4vw, 28px); letter-spacing: -.02em; font-weight: 700; }
+  .career span { color: var(--muted); font-size: 15px; grid-column: 1; }
+  .career .y { grid-column: 2; grid-row: 1 / span 2; align-self: center; font: 400 14px var(--mono); color: var(--muted); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .chips span { border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; font-size: 13.5px; color: var(--muted); }
+  .contact .wrap { padding-block: 72px 40px; display: flex; flex-direction: column; gap: 20px; }
+  .contact h2 { font-size: clamp(44px, 9vw, 120px); line-height: .9; letter-spacing: -.05em; }
+  .contact h2 span { color: var(--clay); }
+  .mail { font-family: var(--display); font-size: clamp(20px, 3.2vw, 40px); letter-spacing: -.02em; user-select: all; overflow-wrap: anywhere; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-block: 20px calc(26px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+  footer b { color: var(--ink); font-family: var(--display); }
+
+  dialog { border: 1px solid var(--line); border-radius: 14px; background: var(--panel); color: var(--ink); padding: 0; width: min(1240px, calc(100vw - 24px)); max-height: calc(100vh - 32px); }
+  dialog::backdrop { background: rgba(0,0,0,.82); }
+  .dlg { display: flex; flex-direction: column; gap: 12px; padding: 12px 14px 16px; max-height: calc(100vh - 34px); overflow: auto; }
+  .dlg-top { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+  .dlg-n { font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .dlg-nav { display: flex; gap: 8px; }
+  .x { background: none; border: 1px solid var(--line); color: var(--ink); border-radius: 999px; width: 38px; height: 38px; cursor: pointer; font-size: 18px; flex-shrink: 0; display: grid; place-items: center; }
+  .x:hover { border-color: var(--clay); color: var(--clay); }
+  .dlg-body { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; align-items: start; }
+  @media (max-width: 820px) { .dlg-body { grid-template-columns: 1fr; gap: 14px; } }
+  .dlg .media { display: grid; gap: 10px; position: relative; touch-action: pan-y; }
+  .dlg .media img, .dlg .media video { width: 100%; border-radius: 8px; display: block; max-height: 78vh; object-fit: contain; background: #000; }
+  .dlg aside { display: flex; flex-direction: column; gap: 8px; padding-top: 4px; }
+  .dlg .kick { font: 500 11px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--clay); margin: 0; }
+  .dlg h3 { font-family: var(--display); font-size: clamp(22px, 2.4vw, 30px); margin: 0; letter-spacing: -.025em; line-height: 1.05; }
+  .dlg p { margin: 0; color: var(--muted); font-size: 14.5px; }
+  .dlg .lbl { margin-top: 10px; font: 500 11px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--blue); }
+  .dlg p.role { font: 400 16px/1.5 var(--body); letter-spacing: normal; text-transform: none; color: var(--ink); }
+  @media (min-width: 821px) { .dlg aside { position: sticky; top: 0; } }
+  .dlg .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+  .dlg .tags span { border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; font-size: 12.5px; color: var(--muted); }
+  .dlg .credit a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--clay); text-underline-offset: 3px; }
+  .dlg .credit { margin-top: 8px; font-size: 13px; color: var(--muted); border-left: 2px solid var(--clay); padding-left: 10px; }
+  .dlg .hint { margin-top: 14px; font-size: 12px; color: var(--muted); opacity: .7; }
+  .hero { isolation: isolate; }
+  .hero .reel { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .5; z-index: -2; }
+  .hero .shade { position: absolute; inset: 0; z-index: -1; pointer-events: none;
+    background: linear-gradient(90deg, var(--bg) 0%, rgba(28,26,24,.86) 34%, rgba(28,26,24,.42) 72%, rgba(28,26,24,.6) 100%), linear-gradient(0deg, var(--bg) 0%, transparent 28%); }
+  .hero::before { z-index: -1; transform: translate(calc(var(--mx, 0) * 60px), calc(var(--my, 0) * 40px)); transition: transform .9s cubic-bezier(.2,.7,.2,1); animation: drift 14s ease-in-out infinite alternate; }
+  @keyframes drift { from { translate: 0 0; } to { translate: -6% 8%; } }
+  h1 { font-size: clamp(54px, 10.4vw, 160px); }
+  .me { position: absolute; right: 20px; top: 50%; width: clamp(190px, 23vw, 340px); aspect-ratio: 1; margin: 0; z-index: 0;
+    transform: translate(calc(var(--mx, 0) * -18px), calc(-50% + var(--my, 0) * -14px)); transition: transform .9s cubic-bezier(.2,.7,.2,1); }
+  .me img { position: relative; width: 100%; height: 100%; object-fit: cover; border-radius: 14px; display: block; filter: saturate(.95) contrast(1.03); box-shadow: 0 30px 80px rgba(0,0,0,.55); }
+  .me .fr { position: absolute; inset: 0; border: 1.5px solid var(--clay); border-radius: 16px; transform: translate(calc(16px + var(--mx, 0) * 14px), calc(16px + var(--my, 0) * 12px)); transition: transform .9s cubic-bezier(.2,.7,.2,1); }
+  .me .fr2 { position: absolute; inset: -10px; border: 1px solid rgba(115,202,231,.35); border-radius: 20px; transform: translate(calc(var(--mx, 0) * -10px), calc(var(--my, 0) * -8px)); transition: transform .9s cubic-bezier(.2,.7,.2,1); }
+  .me figcaption { position: absolute; left: 0; bottom: -30px; font: 500 10.5px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  .reel-btn { position: absolute; right: max(20px, calc((100vw - 1280px) / 2 + 20px)); bottom: 14px; font: 500 10.5px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); background: rgba(28,26,24,.6); border: 1px solid var(--line); border-radius: 999px; padding: 5px 11px; cursor: pointer; }
+  .reel-btn:hover { color: var(--ink); border-color: var(--clay); }
+  @media (max-width: 1100px) { .me { width: clamp(170px, 24vw, 250px); } }
+  @media (max-width: 760px) { .reel-btn { top: 14px; bottom: auto; } }
+  @media (max-width: 760px) { .me { position: relative; right: auto; top: auto; width: 132px; transform: none; order: -1; margin-bottom: 6px; } .me .fr { transform: translate(10px, 10px); } .me figcaption { display: none; } }
+  @media (prefers-reduced-motion: reduce) { .hero::before, .me, .me .fr, .me .fr2 { animation: none; transition: none; } }
+  @media (prefers-reduced-motion: reduce) { .t img, .t video { transition: none; } .t:hover img, .t:hover video { transform: none; } }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#topo">João Mário Araújo</a>
+  <nav aria-label="Seções"><a href="#trabalhos">Trabalhos</a><a href="#servicos">Serviços</a><a href="#trajetoria">Trajetória</a><a href="#contato">Contato</a></nav>
+  <a class="pill solid" href="#contato">Baixar CV</a>
+</div></header>
+
+<main id="topo">
+  <div class="hero" id="hero"><video class="reel" id="reel" src="assets/media/REEL-v8.mp4" poster="assets/media/hero_poster.webp" muted autoplay loop playsinline preload="auto" aria-hidden="true"></video><span class="shade"></span><button class="reel-btn" id="reel-btn" type="button" aria-label="Pausar o demo reel">Demo reel · pausar</button><div class="wrap">
+    <figure class="me"><span class="fr2"></span><span class="fr"></span><img src="assets/media/foto.webp" alt="Foto de João Mário Araújo"><figcaption>Oi, sou o João.</figcaption></figure>
+    <div class="role">UI &amp; Brand Designer · João Pessoa, Brasil</div>
+    <h1>João Mário<br>Araújo</h1>
+    <p class="claim">Do sistema à campanha. <span>Interfaces que funcionam, com ícones e motion que dão vida a elas.</span></p>
+    <div class="ctas"><a class="pill solid" href="#trabalhos">Ver trabalhos</a><a class="pill" href="mailto:jmdsgnr.art@gmail.com">jmdsgnr.art@gmail.com</a><a class="pill" href="#contato">LinkedIn</a></div>
+  </div></div>
+  <div class="wrap"><div class="nums">
+    <div><b>12+ anos</b><span>de design, da marca ao sistema</span></div>
+    <div><b>10 anos</b><span>em sistemas financeiros</span></div>
+    <div><b>Internacional</b><span>quase 5 anos em startup dos EUA</span></div>
+    <div><b>Ícones e motion</b><span>desenhados e animados para interface</span></div>
+  </div></div>
+
+  <section id="trabalhos"><div class="wrap">
+    <div class="tophead"><h2>Trabalhos</h2><div class="jump" id="jump"></div></div>
+    <div id="chapters"></div>
+  </div></section>
+
+  <section class="block" id="servicos"><div class="wrap">
+    <h2 style="margin-bottom:18px">O que eu faço</h2>
+    <div class="services">
+      <div class="svc"><span class="n">01</span><h3>Interface e sistemas</h3><p>Telas, protótipos e design system que o time consegue manter.</p></div>
+      <div class="svc"><span class="n">02</span><h3>Motion e campanha</h3><p>Ícones animados, vídeo de lançamento, conceito e social.</p></div>
+      <div class="svc"><span class="n">03</span><h3>Marca e ilustração</h3><p>Identidade e imagem própria, do logo à capa.</p></div>
+    </div>
+  </div></section>
+
+  <section class="block" id="trajetoria"><div class="wrap">
+    <h2>Trajetória</h2>
+    <ul class="career">
+      <li><b>Sortium</b><span>Designer e líder do time de arte · startup de tecnologia e inovação de Miami, EUA, remoto em inglês</span><span class="y">2021–2026</span></li>
+      <li><b>RedCred</b><span>Diretor de Marketing · fintech de crédito: identidade visual, campanha e social</span><span class="y">2020–2021</span></li>
+      <li><b>Fácil Soluções</b><span>Lead Designer, UI/UX · empresa de tecnologia ISO 9001, sistemas financeiros de alto volume</span><span class="y">2012–2022</span></li>
+      <li><b>Independente</b><span>Marca, interface e direção de arte · identidades, apps e jogos educativos</span><span class="y">2014–hoje</span></li>
+    </ul>
+    <div class="chips"><span>Palestra na BitWeek</span><span>Aulas para professores</span><span>Curso Fundamentos do Desenho</span><span>Figma</span><span>Adobe</span><span>After Effects</span><span>Blender</span><span>Unreal</span></div>
+  </div></section>
+
+  <div class="contact" id="contato"><div class="wrap">
+    <h2>Vamos<br><span>conversar?</span></h2>
+    <div class="mail">jmdsgnr.art@gmail.com</div>
+    <div class="ctas"><a class="pill solid" href="#contato">Baixar CV (PDF)</a><a class="pill" href="#contato">LinkedIn</a><a class="pill" href="#contato">WhatsApp</a></div>
+  </div></div>
+</main>
+
+<footer><div class="wrap"><span>© 2026 João Mário Araújo</span><span>Powered by <b>Duminguz</b></span></div></footer>
+
+<dialog id="dlg" aria-labelledby="dlg-t"><div class="dlg">
+  <div class="dlg-top"><span class="dlg-n" id="dlg-n"></span><div class="dlg-nav"><button class="x" type="button" id="dlg-p" aria-label="Anterior">&#8592;</button><button class="x" type="button" id="dlg-nx" aria-label="Próximo">&#8594;</button><button class="x" type="button" id="dlg-x" aria-label="Fechar">&#215;</button></div></div>
+  <div class="dlg-body"><div class="media" id="dlg-m"></div>
+    <aside><p class="kick" id="dlg-ch"></p><h3 id="dlg-t"></h3><p id="dlg-d"></p><p class="lbl">Meu papel</p><p class="role" id="dlg-r"></p><div class="tags" id="dlg-k"></div><p class="credit" id="dlg-cr"></p><p class="hint">Use as setas ou deslize para ver a próxima peça.</p></aside></div>
+</div></dialog>
+
+<script>
+  const M = {"ds5": "assets/media/ds5.webp", "dados": "assets/media/dados.webp", "cpay": "assets/media/cpay.webp", "bit": "assets/media/bit.webp", "rc1": "assets/media/rc1.webp", "rc2": "assets/media/rc2.webp", "rc3": "assets/media/rc3.webp", "priv": "assets/media/priv.webp", "mulher": "assets/media/mulher.webp", "grou": "assets/media/grou.webp", "grou2": "assets/media/grou2.webp", "mimo": "assets/media/mimo.webp", "alan": "assets/media/alan.webp", "cortador": "assets/media/cortador.webp", "web_enter": "assets/media/web_enter.webp", "web_about": "assets/media/web_about.webp", "web_news": "assets/media/web_news.webp", "web_profile": "assets/media/web_profile.webp", "web_alerts": "assets/media/web_alerts.webp", "web_mobile": "assets/media/web_mobile.webp", "web_shapes": "assets/media/web_shapes.webp", "cg_landing": "assets/media/cg_landing.webp", "cg_approved": "assets/media/cg_approved.webp", "cg_home": "assets/media/cg_home.webp", "cg_social": "assets/media/cg_social.webp", "cg_newsc": "assets/media/cg_newsc.webp", "cg_newsspec": "assets/media/cg_newsspec.webp", "cg_aboutc": "assets/media/cg_aboutc.webp", "cg_aboutspec": "assets/media/cg_aboutspec.webp", "cg_menu": "assets/media/cg_menu.webp", "cg_socialc": "assets/media/cg_socialc.webp", "cg_ds_e": "assets/media/cg_ds_e.webp", "cg_flowers": "assets/media/cg_flowers.webp", "cg_profile2": "assets/media/cg_profile2.webp", "cg_mood": "assets/media/cg_mood.webp", "cg_frames": "assets/media/cg_frames.webp", "rc_serasa": "assets/media/rc_serasa.webp", "rc_st1": "assets/media/rc_st1.webp", "rc_st2": "assets/media/rc_st2.webp", "rc_st3": "assets/media/rc_st3.webp", "fc_door": "assets/media/fc_door.webp", "fc_shirt": "assets/media/fc_shirt.webp", "fc_robot": "assets/media/fc_robot.webp", "fc_poster": "assets/media/fc_poster.webp", "fc_banner": "assets/media/fc_banner.webp", "fc_brand": "assets/media/fc_brand.webp", "grou_card": "assets/media/grou_card.webp", "grou_faces": "assets/media/grou_faces.webp", "mimo_h": "assets/media/mimo_h.webp", "alan_card": "assets/media/alan_card.webp", "ds_p01": "assets/media/ds_p01.webp", "ds_p02": "assets/media/ds_p02.webp", "ds_p03": "assets/media/ds_p03.webp", "ds_p04": "assets/media/ds_p04.webp", "ds_p05": "assets/media/ds_p05.webp", "ds_p06": "assets/media/ds_p06.webp", "ds_p07": "assets/media/ds_p07.webp", "ds_p08": "assets/media/ds_p08.webp", "ds_p09": "assets/media/ds_p09.webp", "ds_p10": "assets/media/ds_p10.webp", "ds_p11": "assets/media/ds_p11.webp", "ds_p12": "assets/media/ds_p12.webp", "ds_p13": "assets/media/ds_p13.webp", "ds_p14": "assets/media/ds_p14.webp", "pay01": "assets/media/pay01.webp", "pay02": "assets/media/pay02.webp", "pay03": "assets/media/pay03.webp", "pay04": "assets/media/pay04.webp", "pay05": "assets/media/pay05.webp", "pay06": "assets/media/pay06.webp", "pay07": "assets/media/pay07.webp", "pay08": "assets/media/pay08.webp", "mob01": "assets/media/mob01.webp", "mob02": "assets/media/mob02.webp", "mob03": "assets/media/mob03.webp", "mob04": "assets/media/mob04.webp", "mob05": "assets/media/mob05.webp", "post01": "assets/media/post01.webp", "post02": "assets/media/post02.webp", "post03": "assets/media/post03.webp", "post04": "assets/media/post04.webp", "post05": "assets/media/post05.webp", "post06": "assets/media/post06.webp", "diag01": "assets/media/diag01.webp", "diag02": "assets/media/diag02.webp", "diag03": "assets/media/diag03.webp", "diag04": "assets/media/diag04.webp", "diag05": "assets/media/diag05.webp", "badge01": "assets/media/badge01.webp", "badge02": "assets/media/badge02.webp", "badge03": "assets/media/badge03.webp", "badge04": "assets/media/badge04.webp", "badge05": "assets/media/badge05.webp", "knob01": "assets/media/knob01.webp", "knob02": "assets/media/knob02.webp", "knob03": "assets/media/knob03.webp", "knob04": "assets/media/knob04.webp", "prof01": "assets/media/prof01.webp", "prof02": "assets/media/prof02.webp", "prof03": "assets/media/prof03.webp", "tv_id1": "assets/media/tv_id1.webp", "tv_id2": "assets/media/tv_id2.webp", "tv_id3": "assets/media/tv_id3.webp", "tv_id4": "assets/media/tv_id4.webp", "tv_pr1": "assets/media/tv_pr1.webp", "tv_pr2": "assets/media/tv_pr2.webp", "tv_pr3": "assets/media/tv_pr3.webp", "tv_pr4": "assets/media/tv_pr4.webp", "tv_pr5": "assets/media/tv_pr5.webp", "ar_cover": "assets/media/ar_cover.webp", "ar_back": "assets/media/ar_back.webp", "jwk1": "assets/media/jwk1.webp", "jwk2": "assets/media/jwk2.webp", "jwk3": "assets/media/jwk3.webp", "jwk4": "assets/media/jwk4.webp", "jwk5": "assets/media/jwk5.webp", "jwm1": "assets/media/jwm1.webp", "jwm2": "assets/media/jwm2.webp", "jwm3": "assets/media/jwm3.webp", "jwm4": "assets/media/jwm4.webp", "jwsb": "assets/media/jwsb.webp", "jwg1": "assets/media/jwg1.webp", "jwg2": "assets/media/jwg2.webp", "jwg3": "assets/media/jwg3.webp", "jwg4": "assets/media/jwg4.webp", "jwg5": "assets/media/jwg5.webp", "jwa1": "assets/media/jwa1.webp", "jwa2": "assets/media/jwa2.webp", "jwa3": "assets/media/jwa3.webp", "jwa4": "assets/media/jwa4.webp", "jwa5": "assets/media/jwa5.webp", "jwa6": "assets/media/jwa6.webp", "sb_nike": "assets/media/sb_nike.webp", "sb_site": "assets/media/sb_site.webp", "sor_banner": "assets/media/sor_banner.webp", "cg_hud": "assets/media/cg_hud.webp", "ic_mob": "assets/media/ic_mob.webp", "ic_grid": "assets/media/ic_grid.webp", "ic_sk": "assets/media/ic_sk.webp", "ic_vec": "assets/media/ic_vec.webp", "ic_print": "assets/media/ic_print.webp", "ic_pay": "assets/media/ic_pay.webp", "fc_bot": "assets/media/fc_bot.webp", "fc_values": "assets/media/fc_robot.webp", "cf_type": "assets/media/cf_type.webp", "cf_trio1": "assets/media/cf_trio1.webp", "cf_trio2": "assets/media/cf_trio2.webp", "cc2": "assets/media/cc2.webp", "cc3": "assets/media/cc3.webp", "cc4": "assets/media/cc4.webp", "cc5": "assets/media/cc5.webp", "cc6": "assets/media/cc6.webp", "cc1": "assets/media/cc1.webp", "nf_br": "assets/media/nf_br.webp", "nf_ks": "assets/media/nf_ks.webp", "nf_sl": "assets/media/nf_sl.webp", "nf_ag": "assets/media/nf_ag.webp", "ar_logoc": "assets/media/ar_logoc.webp", "ar_i1": "assets/media/ar_i1.webp", "ar_i2": "assets/media/ar_i2.webp", "ar_i3": "assets/media/ar_i3.webp", "ar_i4": "assets/media/ar_i4.webp", "ar_i5": "assets/media/ar_i5.webp", "ar_i6": "assets/media/ar_i6.webp", "ar_i7": "assets/media/ar_i7.webp", "icons": "assets/media/icons.webp", "badges2": "assets/media/badges2.webp", "dna": "assets/media/dna.webp", "cg_loader": "assets/media/cg_loader.mp4", "cg_loader_p": "assets/media/cg_loader_p.webp", "RC-video-07": "assets/media/RC-video-07.mp4", "RC-video-07_p": "assets/media/RC-video-07_p.webp", "RC-video-02": "assets/media/RC-video-02.mp4", "RC-video-02_p": "assets/media/RC-video-02_p.webp", "RC-video-03": "assets/media/RC-video-03.mp4", "RC-video-03_p": "assets/media/RC-video-03_p.webp", "JM-desert": "assets/media/JM-desert.mp4", "JM-desert_p": "assets/media/JM-desert_p.webp", "SA-knight-landing": "assets/media/SA-knight-landing.mp4", "SA-knight-landing_p": "assets/media/SA-knight-landing_p.webp", "TV-respect-teaser": "assets/media/TV-respect-teaser.mp4", "TV-respect-teaser_p": "assets/media/TV-respect-teaser_p.webp", "SA-launch-landing": "assets/media/SA-launch-landing.mp4", "SA-launch-landing_p": "assets/media/SA-launch-landing_p.webp", "JW-material": "assets/media/JW-material.mp4", "JW-material_p": "assets/media/JW-material_p.webp", "RC-video-04": "assets/media/RC-video-04.mp4", "RC-video-04_p": "assets/media/RC-video-04_p.webp", "TV-feed": "assets/media/TV-feed.mp4", "TV-feed_p": "assets/media/TV-feed_p.webp", "JM-uefn-dungeon": "assets/media/JM-uefn-dungeon.mp4", "JM-uefn-dungeon_p": "assets/media/JM-uefn-dungeon_p.webp", "TV-pre-gimme": "assets/media/TV-pre-gimme.mp4", "TV-pre-gimme_p": "assets/media/TV-pre-gimme_p.webp", "RC-video-05": "assets/media/RC-video-05.mp4", "RC-video-05_p": "assets/media/RC-video-05_p.webp", "SA-nike-sneaker": "assets/media/SA-nike-sneaker.mp4", "SA-nike-sneaker_p": "assets/media/SA-nike-sneaker_p.webp", "JM-halloween-process": "assets/media/JM-halloween-process.mp4", "JM-halloween-process_p": "assets/media/JM-halloween-process_p.webp", "cg_boxanim": "assets/media/cg_boxanim.mp4", "cg_boxanim_p": "assets/media/cg_boxanim_p.webp", "SH-website": "assets/media/SH-website.mp4", "SH-website_p": "assets/media/SH-website_p.webp", "cg_dna": "assets/media/cg_dna.mp4", "cg_dna_p": "assets/media/cg_dna_p.webp", "TV-pre-devils": "assets/media/TV-pre-devils.mp4", "TV-pre-devils_p": "assets/media/TV-pre-devils_p.webp", "TV-covers": "assets/media/TV-covers.mp4", "TV-covers_p": "assets/media/TV-covers_p.webp", "TV-moto": "assets/media/TV-moto.mp4", "TV-moto_p": "assets/media/TV-moto_p.webp"};
+  const AR = {"mob05": 0.101, "cg_hud": 1.1751, "jwk1": 1.7771, "mimo_h": 2.2727, "cc1": 1.7771, "ds_p06": 1.7778, "cg_loader": 1.0, "sb_site": 0.6657, "fc_bot": 1.0, "nf_ag": 1.7771, "nf_ks": 1.7771, "bit": 1.0, "cf_trio1": 1.4448, "cc5": 2.0073, "grou_faces": 2.8653, "ar_i6": 1.0, "cc3": 2.0073, "RC-video-07": 1.0, "sor_banner": 0.717, "post05": 1.7778, "mob01": 1.227, "rc2": 1.0, "ar_i5": 1.0, "pay07": 1.6725, "jwk3": 1.7771, "fc_poster": 1.1507, "RC-video-02": 1.0, "tv_pr2": 1.7762, "jwg2": 1.3333, "mob04": 0.101, "RC-video-03": 1.0, "post03": 1.7778, "web_mobile": 0.58, "post02": 1.7778, "mob02": 0.5625, "cc2": 2.0073, "dna": 3.0468, "cg_home": 1.7762, "JM-desert": 0.5625, "SA-knight-landing": 2.3704, "prof02": 1.7778, "grou_card": 1.7762, "TV-respect-teaser": 1.0, "ar_logoc": 0.9018, "ds_p01": 1.7778, "knob04": 2.2912, "dados": 1.2262, "rc_st1": 0.562, "pay04": 1.6696, "alan_card": 1.3459, "web_enter": 1.7787, "priv": 1.0, "fc_brand": 1.9011, "pay05": 1.0169, "cg_frames": 1.8519, "cg_approved": 1.7762, "badge01": 3.0968, "cg_landing": 1.7762, "ic_vec": 1.6334, "ds_p02": 1.7778, "cg_newsspec": 1.7762, "ds_p07": 1.7778, "tv_id4": 1.7762, "cc6": 2.0073, "web_news": 1.7787, "ar_i4": 1.0, "knob01": 2.1145, "ds_p05": 1.7778, "ic_pay": 1.5807, "ic_mob": 1.4881, "grou2": 1.0, "cg_social": 1.7762, "ds_p10": 1.7778, "ds_p13": 1.7778, "cg_mood": 1.6077, "mimo": 1.0, "pay02": 1.6872, "SA-launch-landing": 1.7778, "badge05": 1.8898, "fc_door": 1.0975, "ic_grid": 0.8649, "cg_menu": 1.7762, "cf_trio2": 1.4721, "JW-material": 1.7778, "prof01": 1.2732, "RC-video-04": 0.5625, "rc_st3": 0.562, "diag04": 1.6872, "pay01": 1.6842, "cf_type": 2.3679, "tv_pr1": 1.7762, "knob02": 2.1622, "web_profile": 0.9193, "badge03": 1.6134, "ar_back": 1.7762, "cg_socialc": 1.7762, "cortador": 1.0, "TV-feed": 1.0, "ds_p08": 1.7778, "jwk4": 1.7771, "ds_p14": 1.7778, "jwg4": 1.3333, "tv_id3": 1.7762, "JM-uefn-dungeon": 1.7778, "ar_cover": 1.7762, "knob03": 1.2116, "jwm2": 1.7771, "prof03": 1.6216, "pay06": 1.1456, "icons": 1.2212, "diag03": 1.6725, "jwg3": 1.3333, "TV-pre-gimme": 1.0, "post06": 1.7778, "jwg1": 1.3333, "tv_id1": 1.7762, "jwk2": 1.7771, "RC-video-05": 1.0, "web_about": 1.7787, "pay03": 1.6696, "pay08": 2.9268, "diag01": 1.7778, "jwa6": 0.783, "SA-nike-sneaker": 1.7778, "sb_nike": 0.7493, "ar_i1": 1.0, "ar_i3": 1.0, "tv_pr4": 1.7762, "web_shapes": 1.2625, "cg_profile2": 1.7762, "diag05": 1.5402, "web_alerts": 1.1687, "cpay": 1.0, "cg_aboutspec": 1.7762, "jwm3": 1.7771, "jwsb": 1.2222, "jwa4": 0.5, "fc_shirt": 1.6, "jwa3": 0.494, "diag02": 1.5459, "cg_newsc": 1.7762, "post01": 1.7778, "ds5": 1.7787, "mob03": 0.2396, "rc_st2": 0.562, "JM-halloween-process": 1.6854, "ar_i7": 1.0, "rc_serasa": 1.0, "cg_boxanim": 1.7778, "jwk5": 1.7771, "jwa2": 0.494, "fc_banner": 3.5714, "cg_flowers": 1.8657, "post04": 1.7778, "nf_sl": 1.7771, "ds_p04": 1.7778, "tv_id2": 1.8051, "nf_br": 1.7771, "badge02": 1.0847, "ar_i2": 1.0, "rc1": 1.0, "cg_aboutc": 1.7762, "cg_ds_e": 1.7762, "fc_values": 1.5244, "rc3": 1.0, "SH-website": 1.8957, "jwm1": 1.7771, "cg_dna": 1.0, "ic_sk": 1.1786, "ds_p09": 1.7778, "ds_p12": 1.7778, "ic_print": 1.3967, "TV-pre-devils": 1.0, "badges2": 1.5254, "jwg5": 1.3333, "tv_pr3": 1.7762, "jwa1": 0.494, "jwa5": 0.5, "TV-covers": 1.0, "jwm4": 1.7771, "alan": 1.0, "ds_p11": 1.7778, "fc_robot": 1.5244, "badge04": 1.4118, "cc4": 2.0073, "TV-moto": 0.5625, "tv_pr5": 1.7762, "mulher": 1.0, "grou": 1.0, "ds_p03": 1.7778};
+  const FULLV = {"nike": "assets/media/nike-full.mp4", "halloween": "assets/media/halloween-process-full.mp4", "desert": "assets/media/desert-full.mp4"};
+  const SEQ = [["Ícone de menu", "assets/media/seq_00.webp"], ["Ícone do app · Clonar", "assets/media/seq_01.webp"], ["Badge de nível", "assets/media/seq_02.webp"], ["Ícone do app · Info", "assets/media/seq_03.webp"], ["Ícone de menu", "assets/media/seq_04.webp"], ["Ícone do app · Compartilhar", "assets/media/seq_05.webp"], ["Marca de DNA", "assets/media/seq_06.webp"], ["Ícone do app · Enviar", "assets/media/seq_07.webp"], ["Ícone de menu", "assets/media/seq_08.webp"], ["Ícone do app · Interagir", "assets/media/seq_09.webp"], ["Badge de nível", "assets/media/seq_10.webp"], ["Ícone do app · Avançar", "assets/media/seq_11.webp"], ["Ícone de menu", "assets/media/seq_12.webp"], ["Ícone do app · Mais", "assets/media/seq_13.webp"], ["Marca de DNA", "assets/media/seq_14.webp"], ["Ícone do app · Menos", "assets/media/seq_15.webp"], ["Ícone de menu", "assets/media/seq_16.webp"], ["Ícone do app · Grade", "assets/media/seq_17.webp"], ["Badge de nível", "assets/media/seq_18.webp"], ["Ícone do app · Lista", "assets/media/seq_19.webp"], ["Ícone de menu", "assets/media/seq_20.webp"], ["Ícone do app · Sintetizar DNA", "assets/media/seq_21.webp"], ["Marca de DNA", "assets/media/seq_22.webp"], ["Ícone do app · Incinerar", "assets/media/seq_23.webp"], ["Ícone de menu", "assets/media/seq_24.webp"], ["Ícone do app · Nutrir", "assets/media/seq_25.webp"], ["Badge de nível", "assets/media/seq_26.webp"], ["Ícone de menu", "assets/media/seq_27.webp"], ["Marca de DNA", "assets/media/seq_28.webp"], ["Ícone de menu", "assets/media/seq_29.webp"], ["Badge de nível", "assets/media/seq_30.webp"], ["Ícone de menu", "assets/media/seq_31.webp"], ["Ícone de menu", "assets/media/seq_32.webp"], ["Badge de nível", "assets/media/seq_33.webp"], ["Ícone de menu", "assets/media/seq_34.webp"]];
+  const ROLE = {"web_enter": {"r": "Desenhei as telas do site do Cosmogene: a entrada com HUD, a home, a área social e os estados de login com Discord.", "k": ["UI", "Direção visual", "HUD"], "cr": "Com Rafael Ramos Santos, designer sob minha supervisão. Tudo passou pela minha validação final."}, "web_profile": {"r": "Desenhei a página de perfil, com avatar, facção e coleção do usuário reunidos num painel só.", "k": ["UI", "Componentes"], "cr": "Com Rafael Ramos Santos, designer sob minha supervisão. Tudo passou pela minha validação final."}, "web_news": {"r": "Desenhei a área de notícias e a especificação dos componentes dela para o desenvolvimento.", "k": ["Wireframe", "UI"], "cr": "Com Rafael Ramos Santos, designer sob minha supervisão. Tudo passou pela minha validação final."}, "dados": {"r": "Transformei atributos de personalidade num gráfico em forma de flor, que cresce em cada eixo e se lê de relance.", "k": ["Visualização de dados", "UI"]}, "ds1": {"r": "Montei o design system do Cosmogene: cores, tipografia, molduras, botões, estados e campos, usados no site e nas peças da Sortium.", "k": ["Design system"]}, "web_mobile": {"r": "Desenhei as telas mobile do Cosmogene: o MVP do app e os fluxos de assinatura e cobrança.", "k": ["Mobile", "Componentes"], "cr": "Com Rafael Ramos Santos, designer sob minha supervisão. Tudo passou pela minha validação final."}, "web_about": {"r": "Desenhei a página Sobre e a especificação dos componentes dela para o desenvolvimento.", "k": ["UI"], "cr": "Com Rafael Ramos Santos, designer sob minha supervisão. Tudo passou pela minha validação final."}, "ds5": {"r": "Organizei a biblioteca de componentes do sistema: botões, estados, alertas e molduras.", "k": ["Design system", "Componentes"], "cr": "Com Rafael Ramos Santos, designer sob minha supervisão. Tudo passou pela minha validação final."}, "facil_wf": {"r": "Desenhei o wireframe do sistema de gestão da Fácil Soluções e depois o protótipo navegável do cadastro de produtos.", "k": ["Wireframe", "Protótipo", "Adobe XD"]}, "seq": {"r": "Desenhei o banco de ícones do Cosmogene: avatares, emblemas de facção, badges de nível e marcas de DNA, cada um em versão simples e com HUD.", "k": ["Ícones", "Ilustração vetorial", "Sistema"], "cr": "Parte dos ícones genéricos de interface é de Rafael Ramos Santos, designer sob minha supervisão. Os ícones coloridos e de conceito, como os do loop do jogo, são meus. Tudo passou pela minha validação final."}, "mot1": {"r": "Animei o loader e os elementos de HUD da interface.", "k": ["Motion de interface"]}, "web_alerts": {"r": "Explorei os botões de alerta: forma, cor e ícone para cada estado.", "k": ["Ícones", "Estados"], "cr": "Parte dos ícones genéricos de interface é de Rafael Ramos Santos, designer sob minha supervisão. Os ícones coloridos e de conceito, como os do loop do jogo, são meus. Tudo passou pela minha validação final."}, "mot2": {"r": "Animei as caixas e molduras do sistema para as peças da Sortium.", "k": ["Motion de interface"]}, "web_newsicons": {"r": "Desenhei os ícones das categorias de notícia, do esboço a lápis ao vetor final.", "k": ["Ícones", "Processo"]}, "web_shapes": {"r": "Explorei as formas que viraram a linguagem do sistema: molduras, painéis e botões.", "k": ["Exploração", "Design system"]}, "SA-launch-landing": {"r": "Dirigi a equipe de vídeo no lançamento da plataforma Sortium AI: roteiro, ritmo e acabamento.", "k": ["Direção", "Liderança de equipe"], "cr": "Equipe de vídeo da Sortium AI sob minha direção · 3D em Unreal e edição: Cácio Zerra · edição: Rafael Ramos Santos."}, "TV-capa-gimme": {"r": "Ilustrei e animei a capa do single Gimme a Sign, de Tiago Valério.", "k": ["Ilustração", "Animação"]}, "RC-video-07": {"r": "Criei e animei a peça para a RedCred, dentro da identidade que desenhei para a marca.", "k": ["Motion design", "Marca"]}, "SA-knight-landing": {"r": "Dirigi a landing page em vídeo do personagem medieval.", "k": ["Direção", "Landing page"], "cr": "Equipe de vídeo da Sortium AI sob minha direção · 3D em Unreal e edição: Cácio Zerra · edição: Rafael Ramos Santos."}, "SA-witchcat-reels": {"r": "Dirigi o pacote de Halloween para redes, em 16:9 e Reels.", "k": ["Direção", "Social"], "cr": "Equipe de vídeo da Sortium AI sob minha direção · 3D em Unreal e edição: Cácio Zerra · edição: Rafael Ramos Santos."}, "TV-pre-gimme": {"r": "Coloquei motion gráfico sobre cena real para o pré-lançamento do single.", "k": ["Motion design", "Composição"]}, "SA-nike-sneaker": {"r": "Fiz a abertura com o tênis. O filme completo foi feito pela equipe que eu dirigia.", "k": ["Motion design", "Direção"], "cr": "Abertura: João Mário · filme: equipe da Sortium AI (Unreal e edição: Cácio Zerra · edição: Rafael Ramos Santos)."}, "RC-video-05": {"r": "Animei a peça de nova fase da RedCred.", "k": ["Motion design"]}, "TV-respect-teaser": {"r": "Criei o teaser animado de Respect, de Tiago Valério.", "k": ["Animação", "Lançamento"]}, "RC-video-02": {"r": "Animei uma peça da RedCred que passa a mensagem em poucos segundos.", "k": ["Motion design"]}, "RC-video-03": {"r": "Criei o conceito, a ilustração e a animação da campanha Liberdade Financeira, da RedCred.", "k": ["Conceito", "Ilustração", "Motion design"]}, "rc1": {"r": "Ilustrei e compus a série de cartazes da RedCred: cada peça com uma ideia, a tipografia própria e o mesmo universo espacial da marca.", "k": ["Ilustração", "Tipografia", "Série"]}, "rc2": {"r": "Fiz a ilustração e a tipografia do cartaz da campanha da RedCred.", "k": ["Ilustração", "Tipografia"]}, "rc3": {"r": "Fiz a ilustração e a tipografia do cartaz da campanha da RedCred.", "k": ["Ilustração", "Tipografia"]}, "RC-video-04": {"r": "Animei os stories da RedCred, no formato vertical.", "k": ["Motion design", "Social"]}, "priv": {"r": "Criei o conceito, o mascote e as peças da campanha interna de privacidade de dados da Fácil Soluções: cartaz, adesivo de porta e camiseta.", "k": ["Campanha interna", "Mascote", "Aplicações"]}, "jw_key": {"r": "Criei as artes da campanha John Wick × Sortium: a key art, o traje, o medalhão e a moeda.", "k": ["Key art", "Campanha"]}, "JW-material": {"r": "As peças da campanha em sequência: traje, personagem, key art e o medalhão Blood Oath.", "k": ["Campanha", "Ilustração"]}, "jw_coin2": {"r": "Redesenhei a moeda e o medalhão Blood Oath para a campanha e os apliquei em cena.", "k": ["Ilustração", "Campanha"]}, "pol1": {"r": "Desenhei o deck de apresentação da Poligonal: narrativa visual, diagramação e ilustração.", "k": ["Deck", "Diagramação"]}, "pol5": {"r": "Desenhei o deck de apresentação da Poligonal: narrativa visual, diagramação e ilustração.", "k": ["Deck", "Diagramação"]}, "mulher": {"r": "Criei a peça de Dia das Mulheres para a Fácil Soluções.", "k": ["Social", "Ilustração"]}, "TV-betterthan": {"r": "Ilustrei e animei a faixa Better Than This, de Tiago Valério.", "k": ["Ilustração", "Animação"]}, "cpay": {"r": "Criei as marcas Cpay e BitPontos, produtos financeiros da Fácil Soluções, e a forma como elas vivem junto da marca-mãe.", "k": ["Marca", "Fintech", "Arquitetura de marca"]}, "bit": {"r": "Criei a marca BitPontos, produto da Fácil Soluções.", "k": ["Marca", "Fintech"]}, "grou": {"r": "Criei a identidade visual da Grou: logotipo, cartão e aplicações.", "k": ["Identidade visual"]}, "cortador": {"r": "Ilustrei a capa de O Cortador, de Kikō Andrade.", "k": ["Ilustração", "Capa"]}, "grou2": {"r": "Desenhei o mascote da Grou e as expressões dele para dar um rosto à marca.", "k": ["Personagem", "Marca"]}, "mimo": {"r": "Criei a identidade visual da Mimo nas versões vertical e horizontal.", "k": ["Identidade visual"]}, "alan": {"r": "Criei a identidade visual de Alan Melo: logotipo e cartão.", "k": ["Identidade visual"]}, "nf_id": {"r": "Criei o sistema de identidade da facção Blackrook: marca, decals de ambiente e de textura, silhuetas com emissivo e paleta.", "k": ["Identidade", "Decals", "Paleta"]}, "rc_st1": {"r": "Adaptei a campanha para o formato vertical dos stories, com a mesma ilustração e tipografia.", "k": ["Social", "Ilustração"]}, "JM-halloween-process": {"r": "Montei a cena da caverna em Blender e fiz o set dressing com IA: do graybox à cena sem IA e à versão final com os props gerados pela Sortium.", "k": ["Blender", "IA generativa", "Set dressing"]}, "JM-desert": {"r": "Fiz a cena do deserto com o totem em Blender, com as rochas texturizadas pela ferramenta da Sortium.", "k": ["Blender", "IA generativa"]}, "JM-uefn-dungeon": {"r": "Montei a cena da masmorra no UEFN, o editor do Fortnite, com os vasos gerados pela Sortium.", "k": ["UEFN", "Unreal", "Social"]}, "SH-website": {"r": "Criei a marca, o mascote animado e o site do Shifty Shepherds.", "k": ["Marca", "Site", "Pixel art"]}, "pay01": {"r": "Desenhei o fluxo de compra do Cosmogene: pacotes de tokens, assinatura, dados de cobrança, processamento e confirmação, com PayPal, MetaMask e cartão.", "k": ["Checkout", "UX de pagamento", "Fintech"], "cr": "Com Rafael Ramos Santos, designer sob minha supervisão. Tudo passou pela minha validação final."}, "diag01": {"r": "Criei os diagramas que explicam o produto: o processo de geração das criaturas e o loop do jogo, com ícones próprios.", "k": ["Diagramas", "Ícones"]}, "badge01": {"r": "Do esboço ao badge final: estudo de formas por nível, grade de 64 px e a família completa.", "k": ["Ícones", "Processo"]}, "knob01": {"r": "Desenhei controles de interface para o painel do laboratório: knobs, alavancas e sliders.", "k": ["UI", "Componentes"]}, "post01": {"r": "Criei os posts do produto para Discord e redes: contagem de lançamento, avisos e notas de versão.", "k": ["Social", "Produto"]}, "ds_p01": {"r": "Montei o design system do Cosmogene em 14 páginas: conceito, estilo, paleta, iconografia, tipografia, lista de componentes e regras de forma.", "k": ["Design system"], "cr": "Com Rafael Ramos Santos, designer sob minha supervisão. Tudo passou pela minha validação final."}, "TV-covers": {"r": "Ilustrei e animei as capas dos quatro singles do EP de Tiago Valério: Gimme a Sign, Devils in Suits, Better Than This e Respect.", "k": ["Ilustração", "Animação", "Capa"]}, "TV-moto": {"r": "Animei o Tiago atravessando o sertão de moto, no reels de pré-lançamento de Better Than This.", "k": ["Animação", "Reels"]}, "TV-pre-devils": {"r": "Criei o pré-lançamento de Devils in Suits: a cena ilustrada e o motion.", "k": ["Ilustração", "Motion design"]}, "TV-feed": {"r": "Animei uma peça de feed da campanha do EP: o lótus em neon na parede.", "k": ["Motion design", "Social"]}, "tv_pr1": {"r": "As pranchas de processo de cada faixa: referências, fotos, esboço e a arte final de cada capa.", "k": ["Processo", "Direção de arte"]}, "tv_id1": {"r": "Criei a identidade visual de Tiago Valério e a direção de arte do EP: logotipo, símbolo, moodboard e arte conceitual.", "k": ["Identidade visual", "Direção de arte"]}, "ar_cover": {"r": "Fiz a direção de arte do deck de Ocupar e Resistir, jogo da Poligonal: a capa e a contracapa, com a marca do jogo.", "k": ["Direção de arte", "Deck", "Marca"]}, "ar_logo": {"r": "Desenhei o lettering do título, os ícones de ocupar, cuidar e resistir e a Metralharroz, a arma de arroz do jogo.", "k": ["Lettering", "Ícones", "Ilustração"]}, "jwk1": {"r": "Pintei as key arts da campanha John Wick × Sortium no iPad: John com o cachorro, as poses com espada e taco, o terno e a cena da mesa alta.", "k": ["Key art", "Pintura digital", "Campanha"]}, "jwm1": {"r": "Redesenhei os objetos do universo para a campanha: o medalhão Blood Oath em duas versões de cor, a moeda e o livro.", "k": ["Ilustração", "Objetos", "Campanha"]}, "jwsb": {"r": "Fiz o storyboard do vídeo da campanha, quadro a quadro.", "k": ["Storyboard", "Narrativa"]}, "jwg1": {"r": "Desenhei as pranchas do jogo: o mapa do cenário, os tipos de cobertura, o alcance de combate e o comportamento dos inimigos.", "k": ["Diagramas", "Level design", "UX"]}, "sb_site": {"r": "Fiz o storyboard do site do Cosmogene: a sequência de telas, da entrada ao laboratório, antes de desenhar a interface.", "k": ["Storyboard", "Fluxo", "UX"]}, "sb_nike": {"r": "Fiz o storyboard da abertura do filme Sortium × Nike: o tênis do esboço à textura gerada.", "k": ["Storyboard", "Motion"]}, "jwa1": {"r": "Pintei as telas do app da campanha no iPad: status, treino, arsenal, o Hotel Continental e a mesa alta, no formato do celular.", "k": ["Matte painting", "Mobile", "Campanha"]}, "sor_banner": {"r": "Ilustrei o banner do site da Sortium AI.", "k": ["Ilustração", "Web"]}, "fc_bot": {"r": "Desenhei o FácilBot, mascote do ConsigFácil, e os ícones ilustrados do app.", "k": ["Mascote", "Ícones", "Fintech"]}, "ic_mob": {"r": "Desenhei os 13 ícones do app mobile da Cosmogene: da referência ao esboço, do esboço ao vetor no grid, e o ícone aplicado na tela.", "k": ["Ícones", "Grid", "Mobile"], "cr": "Parte dos ícones genéricos de interface é de Rafael Ramos Santos, designer sob minha supervisão. Os ícones coloridos e de conceito, como os do loop do jogo, são meus. Tudo passou pela minha validação final."}, "ic_pay": {"r": "Desenhei os ícones da página de pagamento: os pacotes de token e os quatro níveis de assinatura.", "k": ["Ícones", "Pagamento", "Checkout"], "cr": "Parte dos ícones genéricos de interface é de Rafael Ramos Santos, designer sob minha supervisão. Os ícones coloridos e de conceito, como os do loop do jogo, são meus. Tudo passou pela minha validação final."}, "cf_trio1": {"r": "Desenhei o ConsigFácil inteiro, app de crédito consignado, e a versão em espanhol para o mercado mexicano (NomiPay): margem disponível, simulação, reservas, permissões, carregamento e a escolha de tema claro ou escuro, com a tipografia do sistema.", "k": ["Fintech", "Mobile", "UI", "México"]}, "cg_boxanim": {"r": "Animei a interface do Cosmogene: as caixas de conteúdo que se abrem, o HUD e as telas de carregamento das atualizações mensais.", "k": ["Motion de interface", "HUD", "After Effects"]}, "cg_loader": {"r": "Desenhei e animei o loader do Cosmogene, com a marca do DNA no centro.", "k": ["Motion de interface", "Loader"]}, "cg_dna": {"r": "Animei a hélice de DNA, o símbolo da marca Cosmogene.", "k": ["Motion", "Marca"]}, "cc2": {"r": "Desenhei compostos químicos fictícios para os jogos da Sortium: cada um parte de uma molécula real e segue o guia visual da marca.", "k": ["Ícones", "Ilustração científica", "Sistema"]}, "nf_br": {"r": "Criei o sistema de identidade das quatro facções do Neon Flux (Black Rook, Kaidan Syndicate, Street Lotus e After Glow): marca, decals de ambiente e de textura, silhuetas com emissivo e paleta de cada uma.", "k": ["Identidade", "Decals", "Paleta"]}, "ar_logoc": {"r": "Desenhei o lettering do título de Ocupar e Resistir e os ícones do jogo.", "k": ["Lettering", "Ícones", "Marca"]}};
+  // f: featured (a block two rows tall). i = image, v = video, seq = icon player
+  const CH = [
+    { id: 'interface', t: 'Interface e design system', p: 'Telas, fluxos e sistemas visuais para produtos digitais.', items: [
+      { t: 'Site imersivo', c: 'Telas do site · Cosmogene', y: '2022', i: 'web_enter', f: 1, s: ['web_enter', 'cg_landing', 'cg_approved', 'cg_home', 'cg_social'], tr: 'scan' },
+      { t: 'Perfil do usuário', c: 'Interface · Cosmogene', y: '2022', i: 'web_profile' },
+      { t: 'Notícias', c: 'Interface → especificação · Cosmogene', y: '2022', i: 'web_news', s: ['web_news', 'cg_newsc', 'cg_newsspec'], tr: 'scan' },
+      { t: 'Visualização de dados', c: 'Gráficos em flor · Cosmogene', y: '2023', i: 'dados', s: ['dados', 'cg_flowers', 'cg_profile2', 'prof01', 'prof02', 'prof03'], tr: 'glitch' },
+      { t: 'Diagramas do produto', c: 'Processo e loop do jogo · Cosmogene', y: '2023', i: 'diag01', s: ['diag01', 'diag02', 'diag03', 'diag04', 'diag05'], tr: 'scan' },
+      { t: 'Design system', c: '14 páginas · Cosmogene', y: '2022–23', i: 'ds_p01', s: ['ds_p01', 'ds_p02', 'ds_p03', 'ds_p04', 'ds_p05', 'ds_p06', 'ds_p07', 'ds_p08', 'ds_p09', 'ds_p10', 'ds_p11', 'ds_p12', 'ds_p13', 'ds_p14'], tr: 'scan' },
+      { t: 'App mobile', c: 'MVP e assinatura · Cosmogene', y: '2022–23', i: 'web_mobile', s: ['web_mobile', 'mob01', 'mob02', 'mob03', 'mob04', 'mob05'], tr: 'scan' },
+      { t: 'Checkout e pagamento', c: 'Pacotes, cobrança e confirmação · Cosmogene', y: '2022', i: 'pay01', s: ['pay01', 'pay02', 'pay03', 'pay04', 'pay05', 'pay06', 'pay07', 'pay08'], tr: 'scan' },
+      { t: 'App ConsigFácil', c: 'Crédito consignado · Fácil Soluções', y: '2019', i: 'cf_trio1', f: 1, s: ['cf_trio1', 'cf_trio2', 'cf_type'], tr: 'scan' },
+      { t: 'Storyboard do site', c: 'Fluxo das telas · Cosmogene', y: '2022', i: 'sb_site' },
+      { t: 'Site Shifty Shepherds', c: 'Marca e site · Shifty Shepherds', y: '', v: 'SH-website' },
+      { t: 'Sobre', c: 'Interface → especificação · Cosmogene', y: '2022', i: 'web_about', s: ['web_about', 'cg_aboutc', 'cg_aboutspec'], tr: 'scan' },
+      { t: 'Componentes', c: 'Design system · Cosmogene', y: '2022–23', i: 'ds5', s: ['ds5', 'cg_menu', 'cg_socialc', 'cg_ds_e'], tr: 'scan' }
+    ]},
+    { id: 'icones', t: 'Ícones e motion de interface', p: 'Desenho o ícone e faço ele se mexer.', items: [
+      { t: 'Banco de ícones', c: 'Ícones, badges e marcas · Cosmogene', y: '2022–23', seq: 1, f: 1 },
+      { t: 'Loader', c: 'Motion de interface · Cosmogene', y: '2022', v: 'cg_loader' },
+      { t: 'Hélice de DNA', c: 'Marca animada · Cosmogene', y: '2022', v: 'cg_dna' },
+      { t: 'Compostos químicos', c: 'Ícones científicos · Cosmogene', y: '2022', i: 'cc2', s: ['cc2', 'cc3', 'cc4', 'cc5', 'cc6', 'cc1'], tr: 'scan' },
+      { t: 'FácilBot', c: 'Mascote e ícones do app · ConsigFácil', y: '', i: 'fc_bot', s: ['fc_bot', 'fc_values'], tr: 'glitch' },
+      { t: 'Ícones do app', c: 'Do esboço à tela · Cosmogene', y: '2023', i: 'ic_mob', s: ['ic_mob', 'ic_grid', 'ic_sk', 'ic_vec', 'ic_print'], tr: 'scan' },
+      { t: 'Motion de interface', c: 'Caixas de conteúdo e HUD · Cosmogene', y: '2022', v: 'cg_boxanim', f: 1 },
+      { t: 'Botões de alerta', c: 'Exploração · Cosmogene', y: '2022', i: 'web_alerts' },
+      { t: 'Pacotes e assinatura', c: 'Ícones de pagamento · Cosmogene', y: '2022', i: 'ic_pay' },
+      { t: 'Sistema de facção', c: 'Quatro facções: marca, decals e paleta · Neon Flux', y: '', i: 'nf_br', s: ['nf_br', 'nf_ks', 'nf_sl', 'nf_ag'], tr: 'glitch' },
+      { t: 'Do esboço ao badge', c: 'Níveis, grade e família · Cosmogene', y: '2022–23', i: 'badge01', s: ['badge01', 'badge02', 'badge03', 'badge04', 'badge05'], tr: 'glitch' },
+      { t: 'Controles de interface', c: 'Knobs, alavancas e sliders · Cosmogene', y: '2022', i: 'knob01', s: ['knob01', 'knob02', 'knob03', 'knob04'], tr: 'scan' },
+      { t: 'Formas do sistema', c: 'Exploração · Cosmogene', y: '2022', i: 'web_shapes', s: ['web_shapes', 'cg_hud', 'cg_mood', 'cg_frames'], tr: 'glitch' }
+    ]},
+    { id: 'motion', t: 'Motion, 3D e lançamento', p: 'Vídeo para lançar produto e marca, e a equipe que eu dirigia.', items: [
+      { t: 'Sortium × Nike', c: 'Abertura minha · filme da equipe', y: '2024', v: 'SA-nike-sneaker', f: 1, full: 'nike' },
+      { t: 'Storyboard da abertura', c: 'Sortium × Nike', y: '2024', i: 'sb_nike' },
+      { t: 'Lançamento da plataforma', c: 'Direção · equipe Sortium AI', y: '2024', v: 'SA-launch-landing' },
+      { t: 'Tiago de moto', c: 'Reels de pré-lançamento · Tiago Valério', y: '2021', v: 'TV-moto' },
+      { t: 'Estação RedCred', c: 'Motion · RedCred', y: '2020–21', v: 'RC-video-07' },
+      { t: 'Cena do deserto', c: 'Blender e IA · Sortium AI', y: '2024', v: 'JM-desert', full: 'desert' },
+      { t: 'Landing page em vídeo', c: 'Direção · equipe Sortium AI', y: '2024', v: 'SA-knight-landing' },
+      { t: 'Set dressing com IA', c: 'Graybox → sem IA → com IA · Blender', y: '2024', v: 'JM-halloween-process', f: 1, full: 'halloween' },
+      { t: 'Masmorra no Fortnite', c: 'UEFN · Sortium AI', y: '2023', v: 'JM-uefn-dungeon' },
+      { t: 'Nova fase', c: 'Motion · RedCred', y: '2020–21', v: 'RC-video-05' },
+      { t: 'Sem explicação', c: 'Motion · RedCred', y: '2020–21', v: 'RC-video-02' }
+    ]},
+    { id: 'campanha', t: 'Campanha e social', p: 'Conceito, ilustração e tipografia para vender.', items: [
+      { t: 'Liberdade financeira', c: 'Campanha em vídeo · RedCred', y: '2020–21', v: 'RC-video-03', f: 1 },
+      { t: 'Cartazes da campanha', c: 'Ilustração e tipografia · RedCred', y: '2020–21', i: 'rc1', s: ['rc1', 'rc2', 'rc3', 'rc_serasa'], tr: 'glitch' },
+      { t: 'Stories', c: 'RedCred', y: '2020–21', v: 'RC-video-04' },
+      { t: 'Peças verticais', c: 'Stories estáticos · RedCred', y: '2020–21', i: 'rc_st1', s: ['rc_st1', 'rc_st2', 'rc_st3'], tr: 'scan' },
+      { t: 'Privacidade de dados', c: 'Campanha interna · Fácil Soluções', y: '2019', i: 'priv', s: ['priv', 'fc_poster', 'fc_door', 'fc_shirt', 'fc_robot'], tr: 'glitch' },
+      { t: 'Dia das Mulheres', c: 'Fácil Soluções', y: '', i: 'mulher' },
+      { t: 'Posts do produto', c: 'Lançamento e avisos · Cosmogene', y: '2022', i: 'post01', s: ['post01', 'post02', 'post03', 'post04', 'post05', 'post06'], tr: 'glitch' },
+      { t: 'Ocupar e Resistir', c: 'Capa e contracapa do deck · Poligonal', y: '2026', i: 'ar_cover', s: ['ar_cover', 'ar_back'], tr: 'glitch' },
+      { t: 'Logo e ícones', c: 'Ocupar e Resistir · Poligonal', y: '2026', i: 'ar_logoc', s: ['ar_logoc', 'ar_i1', 'ar_i2', 'ar_i3', 'ar_i4', 'ar_i5', 'ar_i6', 'ar_i7'], tr: 'scan' },
+      { t: 'John Wick × Sortium', c: 'Key arts da campanha', y: '2023', i: 'jwk1', f: 1, s: ['jwk1', 'jwk2', 'jwk3', 'jwk4', 'jwk5'], tr: 'glitch' },
+      { t: 'Do traje ao medalhão', c: 'Peças da campanha · John Wick × Sortium', y: '2023', v: 'JW-material' },
+      { t: 'O medalhão, a moeda e o livro', c: 'Objetos da campanha · John Wick × Sortium', y: '2023', i: 'jwm1', s: ['jwm1', 'jwm2', 'jwm3', 'jwm4'], tr: 'glitch' },
+      { t: 'Storyboard', c: 'Vídeo da campanha · John Wick × Sortium', y: '2023', i: 'jwsb' },
+      { t: 'Telas do app', c: 'Status, treino e arsenal · John Wick × Sortium', y: '2023', i: 'jwa1', s: ['jwa1', 'jwa2', 'jwa3', 'jwa4', 'jwa5', 'jwa6'], tr: 'scan' },
+      { t: 'Design do jogo', c: 'Mapa, cobertura e alcance · John Wick × Sortium', y: '2023', i: 'jwg1', s: ['jwg1', 'jwg2', 'jwg3', 'jwg4', 'jwg5'], tr: 'scan' },
+      { t: 'Capas dos singles', c: 'Quatro capas animadas · Tiago Valério', y: '2021', v: 'TV-covers', f: 1 },
+      { t: 'Pré-lançamento Gimme a Sign', c: 'Motion em cena real · Tiago Valério', y: '2021', v: 'TV-pre-gimme' },
+      { t: 'Pré-lançamento Devils in Suits', c: 'Cena e motion · Tiago Valério', y: '2021', v: 'TV-pre-devils' },
+      { t: 'Respect', c: 'Teaser · Tiago Valério', y: '2021', v: 'TV-respect-teaser' },
+      { t: 'Feed do EP', c: 'Peça animada · Tiago Valério', y: '2021', v: 'TV-feed' },
+      { t: 'Do conceito à capa', c: 'Pranchas de processo · Tiago Valério', y: '2021', i: 'tv_pr1', s: ['tv_pr1', 'tv_pr2', 'tv_pr3', 'tv_pr4', 'tv_pr5'], tr: 'scan' }
+    ]},
+    { id: 'marca', t: 'Marca e ilustração', p: 'Identidade e imagem com desenho próprio.', items: [
+      { t: 'Identidade Tiago Valério', c: 'Logo, moodboard e arte conceitual', y: '2021', i: 'tv_id1', f: 1, s: ['tv_id1', 'tv_id2', 'tv_id3', 'tv_id4'], tr: 'glitch' },
+      { t: 'Ilustração do site', c: 'Banner · Sortium AI', y: '2023', i: 'sor_banner' },
+      { t: 'Cpay', c: 'Marca de produto financeiro · Fácil Soluções', y: '', i: 'cpay', s: ['cpay', 'fc_banner', 'fc_brand'], tr: 'glitch' },
+      { t: 'BitPontos', c: 'Marca · Fácil Soluções', y: '', i: 'bit' },
+      { t: 'Grou', c: 'Identidade · agência', y: '', i: 'grou', s: ['grou', 'grou_card'], tr: 'glitch' },
+      { t: 'O Cortador', c: 'Capa · Kikō Andrade', y: '', i: 'cortador' },
+      { t: 'Mascote Grou', c: 'Personagem de marca', y: '', i: 'grou2', s: ['grou2', 'grou_faces'], tr: 'glitch' },
+      { t: 'Mimo', c: 'Identidade', y: '', i: 'mimo', s: ['mimo', 'mimo_h'], tr: 'glitch' },
+      { t: 'Alan Melo', c: 'Identidade', y: '', i: 'alan', s: ['alan', 'alan_card'], tr: 'glitch' }
+    ]}
+  ];
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  document.getElementById('jump').innerHTML = CH.map(c => `<a href="#${c.id}">${c.t}</a>`).join('');
+  const media = w => w.seq
+    ? `<span class="seq">${SEQ.map((s, k) => `<img src="${s[1]}" alt="" data-l="${s[0]}"${k === 0 ? ' class="on"' : ''}>`).join('')}<span class="ring"></span><span class="lab"></span><span class="bar"></span></span>`
+    : w.v ? `<video src="${M[w.v]}" poster="${M[w.v + '_p'] || ''}" muted autoplay loop playsinline preload="auto"></video><span class="play">vídeo</span>`
+    : w.s ? `<span class="sl ${w.tr || 'glitch'}">${w.s.map((k, n) => `<span class="s${n === 0 ? ' on' : ''}">${Math.abs((AR[k] || 1) / (AR[w.s[0]] || 1) - 1) > .04 ? `<img class="bb" loading="lazy" decoding="async" src="${M[k]}" alt="">` : ''}<img loading="lazy" decoding="async" src="${M[k]}" alt=""></span>`).join('')}</span><span class="dots">${w.s.map((k, n) => `<i${n === 0 ? ' class="on"' : ''}></i>`).join('')}</span>`
+    : `<img loading="lazy" decoding="async" src="${M[w.i]}" alt="" class="${w.fit ? 'fit' : ''}">`;
+  document.getElementById('chapters').innerHTML = CH.map((c, ci) => `
+    <div class="chapter" id="${c.id}">
+      <div class="chap-h"><span class="n">0${ci + 1}</span><h3>${c.t}</h3><p>${c.p}</p></div>
+      <div class="grid" data-c="${ci}">${c.items.map((w, wi) => `<button class="t${w.f ? ' f' : ''}${!w.s && !w.v && !w.seq ? ' one' : ''}" type="button" data-c="${ci}" data-w="${wi}" aria-label="${esc(w.t)}" style="--d:${(Math.random() * 7).toFixed(1)}s"><span class="m">${media(w)}</span><span class="cap"><span><b>${esc(w.t)}</b><small>${esc(w.c)}</small></span><span class="y">${w.y}</span></span></button>`).join('')}</div>
+    </div>`).join('');
+
+  const CAP = 36;
+  const arOf = w => w.seq ? 1 : (AR[w.v || w.i] || 1.5);
+  function layout(grid) {
+    const src = CH[+grid.dataset.c].items, tiles = grid.children, W = grid.clientWidth;
+    if (!W) return;
+    const ord = src.map((_, k) => k); let items = src.slice();
+    const g = W < 600 ? 8 : 10, H = W < 600 ? 118 : W < 1000 ? 165 : 205, wide = W >= 700;
+    const P = []; let y = 0, i = 0, side = 0, prev = null; const moved = new Set();
+    const sumA = (a, b) => { let A = 0; for (let k = a; k < b; k++) A += arOf(items[k]); return A; };
+    const place = (from, to, x0, top, h) => { let x = x0; for (let k = from; k < to; k++) { const w = arOf(items[k]) * h; P[k] = [x, top, w, h]; x += w + g; } };
+    // featured block: the piece two rows tall on one side, two justified rows beside it. Tries taller targets until the rows fill.
+    const block = (i) => {
+      const af = arOf(items[i]), gC = g + CAP;
+      for (const Ht of [H, H * 1.15, H * 1.3, H * 1.45, H * 1.6]) {
+        const Wr = W - g - af * (2 * Ht + gC);
+        if (Wr < 1.3 * Ht) break;
+        const pick = from => { let A = 0, j = from; while (j < items.length && !items[j].f) { A += arOf(items[j]); j++; if (A * Ht + (j - from - 1) * g >= Wr) break; } return [j, A]; };
+        const [j1, A1] = pick(i + 1); let [j2, A2] = pick(j1);
+        // leftovers too few to fill a row of their own join the block's second row
+        { let end = j2; while (end < items.length && !items[end].f) end++;
+          if (end > j2 && sumA(j2, end) * Ht + (end - j2 - 1) * g < .75 * W) { j2 = end; A2 = sumA(j1, end); } }
+        if (!(j1 > i + 1 && j2 > j1)) continue;
+        const c1 = (j1 - i - 2) * g, c2 = (j2 - j1 - 1) * g;
+        if (A1 * Ht + c1 < Wr * .8 || A2 * Ht + c2 < Wr * .8) continue;
+        const h1 = (W - g - c1 - af * ((c1 - c2) / A2 + gC)) / (af + af * A1 / A2 + A1);
+        const h2 = (A1 * h1 + c1 - c2) / A2, Hf = h1 + h2 + gC, Wf = af * Hf;
+        if (h1 < .55 * H || h2 < .55 * H || h1 > 2 * H || h2 > 2 * H) continue;
+        const fx = side ? W - Wf : 0, rx = side ? 0 : Wf + g;
+        P[i] = [fx, y, Wf, Hf]; place(i + 1, j1, rx, y, h1); place(j1, j2, rx, y + h1 + gC, h2);
+        y += Hf + CAP + g; side ^= 1; return j2;
+      }
+      return 0;
+    };
+    while (i < items.length) {
+      const it = items[i];
+      if (it.f && wide) { const j = block(i); if (j) { i = j; prev = null; continue; } }
+      if (it.f && !wide) { const a = arOf(it), h = Math.min(W / a, W * 1.2); P[i] = [(W - a * h) / 2, y, a * h, h]; y += h + CAP + g; i++; prev = null; continue; }
+      // normal justified row (on mobile a featured piece never joins a row, it gets its own)
+      let j = i, A = 0;
+      while (j < items.length && !(j > i && items[j].f)) { A += arOf(items[j]); j++; if (A * H + (j - i - 1) * g >= W) break; }
+      let h = (W - (j - i - 1) * g) / A;
+      // a short row cut by a featured piece: bring the featured piece forward so its block absorbs these
+      if (wide && j < items.length && items[j].f && h > H * 1.3 && !moved.has(ord[j])) { moved.add(ord[j]); ord.splice(i, 0, ord.splice(j, 1)[0]); items = ord.map(k => src[k]); continue; }
+      if (h > H * 1.9) {  // a short row left over: fold it into the row above, else keep it at a normal height
+        if (prev && (W - (j - prev.i - 1) * g) / sumA(prev.i, j) >= .62 * H) { y = prev.y; i = prev.i; h = (W - (j - i - 1) * g) / sumA(i, j); }
+        else h = H * 1.2;
+      }
+      place(i, j, 0, y, h); prev = { i, y }; y += h + CAP + g; i = j;
+    }
+    const Q = []; ord.forEach((o, k) => { Q[o] = P[k]; });
+    [...tiles].forEach((el, k) => { const [x, top, w, h] = Q[k]; el.style.cssText = `left:${x}px;top:${top}px;width:${w}px;height:${h + CAP}px`; el.firstElementChild.style.height = h + 'px'; });
+    grid.style.height = (y - g) + 'px';
+  }
+  const grids = [...document.querySelectorAll('.grid')];
+  const relayout = () => grids.forEach(layout);
+  relayout();
+  if ('ResizeObserver' in window) { let raf; new ResizeObserver(() => { cancelAnimationFrame(raf); raf = requestAnimationFrame(relayout); }).observe(document.getElementById('chapters')); }
+  else window.addEventListener('resize', relayout);
+
+  // slides: each tile on its own clock, only while on screen, paused on hover
+  (() => {
+    const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.querySelectorAll('.sl').forEach(sl => {
+      const ss = [...sl.children], dots = [...sl.parentElement.querySelectorAll('.dots i')], tile = sl.closest('.t');
+      let k = 0, seen = false, hover = false;
+      if ('IntersectionObserver' in window) new IntersectionObserver(es => es.forEach(e => seen = e.isIntersecting), { threshold: .2 }).observe(tile); else seen = true;
+      tile.addEventListener('pointerenter', () => hover = true); tile.addEventListener('pointerleave', () => hover = false);
+      const step = () => {
+        if (seen && !hover && !document.hidden) {
+          const prev = ss[k]; prev.classList.remove('on', 'go'); prev.classList.add('out'); setTimeout(() => prev.classList.remove('out'), 900);
+          dots[k].classList.remove('on'); k = (k + 1) % ss.length; ss[k].classList.add('on', 'go'); dots[k].classList.add('on');
+        }
+        setTimeout(step, (still ? 5200 : 3000) + Math.random() * 1800);
+      };
+      setTimeout(step, 1200 + Math.random() * 3200);
+    });
+  })();
+  // icon player
+  document.querySelectorAll('.seq').forEach(s => {
+    const imgs = [...s.querySelectorAll('img')], lab = s.querySelector('.lab'), ring = s.querySelector('.ring'), bar = s.querySelector('.bar');
+    let k = 0; const n = imgs.length, pad = x => String(x).padStart(2, '0');
+    const show = () => { lab.textContent = `${pad(k + 1)}/${n} · ${imgs[k].dataset.l}`; bar.style.width = ((k + 1) / n * 100) + '%'; };
+    show();
+    const step = () => {
+      const prev = imgs[k]; prev.classList.remove('on'); prev.classList.add('out'); setTimeout(() => prev.classList.remove('out'), 400);
+      k = (k + 1) % n; imgs[k].classList.add('on'); ring.classList.remove('go'); void ring.offsetWidth; ring.classList.add('go'); show();
+    };
+    setInterval(step, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 2400 : 1300);
+  });
+
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const vids = [...document.querySelectorAll('.t video')];
+  vids.forEach(v => { v.muted = true; v.defaultMuted = true; });
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (reduce) return; e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause(); }), { threshold: 0.15 });
+    vids.forEach(v => io.observe(v));
+  } else if (!reduce) vids.forEach(v => v.play().catch(() => {}));
+
+  const PEOPLE = { 'Cácio Zerra': 'https://www.linkedin.com/in/caciozerra/', 'Rafael Ramos Santos': 'https://www.linkedin.com/in/rafael-ramos-santos-b1272423/' };
+  const dlg = document.getElementById('dlg'), $ = id => document.getElementById(id);
+  // hero: pointer moves the glow, the photo and its frames in layers; the reel can be paused
+  (() => {
+    const hero = $('hero'), reel = $('reel'), btn = $('reel-btn');
+    const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    reel.muted = true;
+    if (still) { reel.removeAttribute('autoplay'); reel.pause(); btn.textContent = 'Demo reel · tocar'; }
+    btn.addEventListener('click', () => { if (reel.paused) { reel.play().catch(() => {}); btn.textContent = 'Demo reel · pausar'; } else { reel.pause(); btn.textContent = 'Demo reel · tocar'; } });
+    if (still) return;
+    let raf;
+    hero.addEventListener('pointermove', e => { cancelAnimationFrame(raf); raf = requestAnimationFrame(() => { const r = hero.getBoundingClientRect();
+      hero.style.setProperty('--mx', ((e.clientX - r.left) / r.width - .5).toFixed(3)); hero.style.setProperty('--my', ((e.clientY - r.top) / r.height - .5).toFixed(3)); }); });
+    hero.addEventListener('pointerleave', () => { hero.style.setProperty('--mx', 0); hero.style.setProperty('--my', 0); });
+    if (!window.matchMedia('(hover: hover)').matches) { let k = 0; setInterval(() => { k += .035; hero.style.setProperty('--mx', (Math.sin(k) * .35).toFixed(3)); hero.style.setProperty('--my', (Math.cos(k * .8) * .25).toFixed(3)); }, 60); }
+  })();
+
+  const ALL = CH.flatMap((c, ci) => c.items.map((w, wi) => [ci, wi]));
+  let cur = 0;
+  const show = n => {
+    cur = (n + ALL.length) % ALL.length;
+    const [ci, wi] = ALL[cur], w = CH[ci].items[wi], key = w.seq ? 'seq' : (w.v || w.i), r = ROLE[key] || {};
+    dlg.querySelectorAll('video').forEach(v => v.pause());
+    $('dlg-n').textContent = `${String(cur + 1).padStart(2, '0')} / ${ALL.length}`;
+    $('dlg-ch').textContent = CH[ci].t;
+    $('dlg-t').textContent = w.t;
+    $('dlg-d').textContent = w.c + (w.y ? ' · ' + w.y : '');
+    $('dlg-r').textContent = r.r || '';
+    $('dlg-k').innerHTML = (r.k || []).map(x => `<span>${esc(x)}</span>`).join('');
+    $('dlg-cr').innerHTML = Object.entries(PEOPLE).reduce((h, [n, u]) => h.split(esc(n)).join(`<a href="${u}" target="_blank" rel="noopener">${esc(n)}</a>`), esc(r.cr || ''));
+    $('dlg-m').innerHTML = w.seq ? ['icons', 'badges2', 'dna'].map(k => `<img loading="lazy" decoding="async" src="${M[k]}" alt="${esc(w.t)}">`).join('')
+      : w.s ? w.s.map(k => `<img loading="lazy" decoding="async" src="${M[k]}" alt="${esc(w.t)}">`).join('')
+      : w.full && FULLV[w.full] ? `<video src="${FULLV[w.full]}" poster="${M[w.v + '_p'] || ''}" playsinline autoplay controls></video>`
+      : w.v ? `<video src="${M[w.v]}" poster="${M[w.v + '_p'] || ''}" muted loop playsinline autoplay controls></video>`
+      : `<img loading="lazy" decoding="async" src="${M[w.i]}" alt="${esc(w.t)}">`;
+    const v = $('dlg-m').querySelector('video'); if (v) { if (!(w.full && FULLV[w.full])) v.muted = true; v.play().catch(() => { v.muted = true; v.play().catch(() => {}); }); }
+  };
+  $('chapters').addEventListener('click', e => {
+    const b = e.target.closest('.t'); if (!b) return;
+    show(ALL.findIndex(([c, w]) => c === +b.dataset.c && w === +b.dataset.w));
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+  });
+  const closeD = () => { dlg.querySelectorAll('video').forEach(v => v.pause()); dlg.close(); };
+  $('dlg-x').addEventListener('click', closeD);
+  $('dlg-p').addEventListener('click', () => show(cur - 1));
+  $('dlg-nx').addEventListener('click', () => show(cur + 1));
+  dlg.addEventListener('click', e => { if (e.target === dlg) closeD(); });
+  dlg.addEventListener('close', () => dlg.querySelectorAll('video').forEach(v => v.pause()));
+  document.addEventListener('keydown', e => { if (!dlg.open) return; if (e.key === 'ArrowRight') show(cur + 1); if (e.key === 'ArrowLeft') show(cur - 1); });
+  let sx = null, sy = 0;
+  $('dlg-m').addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+  $('dlg-m').addEventListener('touchend', e => { if (sx === null) return; const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy; sx = null; if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) show(cur + (dx < 0 ? 1 : -1)); }, { passive: true });
+</script>
+</body>
+</html>
